@@ -17,7 +17,7 @@ local BuildingParts = ReplicatedStorage:WaitForChild("BuildingParts")
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
 
-local FOLDER_PATH = "SoPeRa_Builds"
+local FOLDER_PATH = "JYPX Buildsv"
 local FOLDER_PREFIX = FOLDER_PATH .. "/"
 local SETTINGS_PATH = "SPRB_Settings.json"
 local CUSTOM_SCRIPTS_PATH = "SPRB_CustomScripts.json"
@@ -5214,7 +5214,7 @@ local function createUI()
         body.ZIndex = 302
         body.Text =
             "Converter supports image JSON, OBJ meshes, and Minecraft .schem/.schematic.\n\n" ..
-            "You can select files from SoPeRa_Builds or paste a full file path.\n\n" ..
+            "You can select files from JYPX Buildsv or paste a full file path.\n\n" ..
             "Image JSON:\n" ..
             "Go to https://www.samcodes.co.uk/project/geometrize-haxe-web/\n" ..
             "Upload an image, open settings and set:\n" ..
@@ -5279,7 +5279,7 @@ local function createUI()
     helpBtn.MouseButton1Click:Connect(openConverterHelp)
 
     makeLabel("FILE / PATH", objFr)
-    local convPathIn = makeInput("ConvPath", "Filename in SoPeRa_Builds or full path", objFr)
+    local convPathIn = makeInput("ConvPath", "Filename in JYPX Buildsv or full path", objFr)
 
     local function getConverterFileOptions()
         ensureFolder()
