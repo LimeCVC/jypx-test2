@@ -3997,7 +3997,7 @@ local function createUI()
     Title.Size = UDim2.new(0.68, 0, 0, 20)
     Title.Position = UDim2.new(0, 14, 0, 8)
     Title.BackgroundTransparency = 1
-    Title.Text = "JYPX // V4.2"
+    Title.Text = "JYPX // v2.1"
     Title.TextColor3 = Colors.Text
     Title.TextSize = 15
     Title.Font = Enum.Font.GothamBold
