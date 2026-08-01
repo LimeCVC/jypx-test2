@@ -19,8 +19,8 @@ local isMobile = UserInputService.TouchEnabled and not UserInputService.Keyboard
 
 local FOLDER_PATH = "SoPeRa_Builds"
 local FOLDER_PREFIX = FOLDER_PATH .. "/"
-local SETTINGS_PATH = "SPRB_Settings.json"
-local CUSTOM_SCRIPTS_PATH = "SPRB_CustomScripts.json"
+local SETTINGS_PATH = "JYPX_Settings.json"
+local CUSTOM_SCRIPTS_PATH = "JYPX_CustomScripts.json"
 local BUILD_SEARCH_PATHS = {
     FOLDER_PREFIX,
     "BABFT/",
@@ -28,8 +28,8 @@ local BUILD_SEARCH_PATHS = {
     "Build/",
 }
 
-local PreviewFolder = Workspace:FindFirstChild("SPRB_Preview") or Instance.new("Folder")
-PreviewFolder.Name = "SPRB_Preview"
+local PreviewFolder = Workspace:FindFirstChild("JYPX_Preview") or Instance.new("Folder")
+PreviewFolder.Name = "JYPX_Preview"
 PreviewFolder.Parent = Workspace
 
 local Settings = {
@@ -3656,7 +3656,7 @@ local function terminateScript(screenGui)
     pcall(function()
         local cg = game:GetService("CoreGui")
         for _, o in pairs(cg:GetChildren()) do
-            if o.Name:find("SPRB") or o.Name:find("CScript_") or o.Name:find("KnifeHUD_SPRB") then
+            if o.Name:find("JYPX") or o.Name:find("CScript_") or o.Name:find("KnifeHUD_JYPX") then
                 pcall(function() o:Destroy() end)
             end
         end
@@ -3665,7 +3665,7 @@ local function terminateScript(screenGui)
         local pg = LocalPlayer:FindFirstChild("PlayerGui")
         if pg then
             for _, o in pairs(pg:GetChildren()) do
-                if o.Name:find("SPRB") or o.Name:find("CScript_") or o.Name:find("KnifeHUD_SPRB") then
+                if o.Name:find("JYPX") or o.Name:find("CScript_") or o.Name:find("KnifeHUD_JYPX") then
                     pcall(function() o:Destroy() end)
                 end
             end
@@ -3697,7 +3697,7 @@ local function createOpenButton(screenGui, textColor)
     openBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     openBtn.BackgroundTransparency = 0.2
     openBtn.BorderSizePixel = 0
-    openBtn.Text = "SPRB"
+    openBtn.Text = "JYPX"
     openBtn.TextColor3 = textColor
     openBtn.TextSize = 13
     openBtn.Font = Enum.Font.GothamBold
@@ -3744,7 +3744,7 @@ end
 
 local function createUI()
     local ScreenGui = Instance.new("ScreenGui")
-    ScreenGui.Name = "SPRBBuilder"
+    ScreenGui.Name = "JYPXBuilder"
     ScreenGui.ResetOnSpawn = false
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.IgnoreGuiInset = true
@@ -3997,7 +3997,7 @@ local function createUI()
     Title.Size = UDim2.new(0.68, 0, 0, 20)
     Title.Position = UDim2.new(0, 14, 0, 8)
     Title.BackgroundTransparency = 1
-    Title.Text = "SPRB // V4.2"
+    Title.Text = "JYPX // V4.2"
     Title.TextColor3 = Colors.Text
     Title.TextSize = 15
     Title.Font = Enum.Font.GothamBold
@@ -6050,7 +6050,7 @@ local function createUI()
         if knifeEnabled then
             if knifeGui then knifeGui:Destroy() end
             knifeGui = Instance.new("ScreenGui")
-            knifeGui.Name = "KnifeHUD_SPRB"
+            knifeGui.Name = "KnifeHUD_JYPX"
             knifeGui.IgnoreGuiInset = true
             knifeGui.DisplayOrder = 9999
             knifeGui.ResetOnSpawn = false
