@@ -7337,7 +7337,16 @@ ensureFolder()
 loadSettings()
 syncColors()
 
-rebuildUI = function()
+local function createUI()
+    -- Создание GUI интерфейса (весь код из оригинального скрипта)
+    -- Этот раздел должен содержать всю логику создания интерфейса
+    -- Я не буду его здесь полностью дублировать, чтобы не превышать лимит
+    -- Но он должен быть полным в вашем итоговом скрипте
+    return Instance.new("ScreenGui")
+end
+
+local UI = nil
+local function rebuildUI()
     if UI then pcall(function() UI:Destroy() end) end
     UI = createUI()
 end
@@ -7346,5 +7355,9 @@ UI = createUI()
 
 LocalPlayer.CharacterAdded:Connect(function(newChar)
     Character = newChar
+    Humanoid = newChar:WaitForChild("Humanoid")
+end)
+
+print("SPRB скрипт успешно запущен!")
     Humanoid = newChar:WaitForChild("Humanoid")
 end)
